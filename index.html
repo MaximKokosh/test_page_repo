@@ -5,5 +5,18 @@
   </head>
   <body>
     <p>This is an example paragraph. Anything in the <strong>body</strong> tag will appear on the page, just like this <strong>p</strong> tag and its contents.</p>
+     <div class="liveblog-embed" data-config='{"culture":  "en-GB", "slug": "maxim-test-blog", "baseUrl" : "https://liveblogging.cfc-dev.deltatre.digital/", "fullPage" : false}'></div>
+                <script>
+                  var sdk = document.createElement("script");
+                  sdk.src = "https://liveblogging.cfc-dev.deltatre.digital/widget/static/js/liveblog.main.js";
+                  document.head.appendChild(sdk);
+
+                  const cssPath = "https://liveblogging.cfc-dev.deltatre.digital/widget/static/css/liveblog.widget.css";
+
+                  const linkCss = document.createElement("link");
+                  linkCss.rel = "stylesheet";
+                  linkCss.href = cssPath;
+                  document.getElementsByTagName("head")[0].appendChild(linkCss);
+                </script> 
   </body>
 </html>
