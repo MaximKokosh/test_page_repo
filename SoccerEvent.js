@@ -3,8 +3,7 @@ import React, { PureComponent } from "react";
 export default class SoccerEvent extends PureComponent {
    render() { 
     const { content } = this.props.data.content;
-    return (
-        <div className={"soccer-event"}>
+    return (<div className={"soccer-event"}>
             <div className={"soccer-event__time"}>
                 {content.time}
             </div>
@@ -14,9 +13,6 @@ export default class SoccerEvent extends PureComponent {
             <div className={"soccer-event__text"}>
                 {content.text}
             </div>
-        </div>
-    );
+        </div>);
+  }
 }
-};
-
-export default SoccerEvent;
