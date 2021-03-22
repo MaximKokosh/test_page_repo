@@ -1,17 +1,18 @@
-import React from "react";
+import React, { PureComponent } from "react";
 
-const SoccerEvent = (props) => {
+export default class MyCustomTextPostPart extends PureComponent=> {
    render() { 
+    const { content } = this.props.data.content;
     return (
         <div className={"soccer-event"}>
             <div className={"soccer-event__time"}>
-                {props.data.content.time}
+                {content.time}
             </div>
             <div className={"soccer-event__type"}>
-                {props.data.content.event_type}
+                {content.event_type}
             </div>
             <div className={"soccer-event__text"}>
-                {props.data.content.text}
+                {content.text}
             </div>
         </div>
     );
