@@ -1,7 +1,7 @@
 import React from "react";
 
 const SoccerEvent = (props) => {
-    return (
+   render() { return (
         <div className={"soccer-event"}>
             <div className={"soccer-event__time"}>
                 {props.data.content.time}
