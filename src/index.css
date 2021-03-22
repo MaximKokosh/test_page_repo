@@ -1,0 +1,53 @@
+html, body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.lb-widget {
+  background-color: #eeeeee;
+}
+
+.soccer-event {
+  text-align: center;
+}
+
+.soccer-event__time {
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+.soccer-event__time:after {
+  content: "''"
+}
+
+.soccer-event__type {
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+
+.soccer-event__text {
+  font-size: 24px;
+}
+
+.sponsor-header {
+  background-color: #f75258;
+  color: white;
+  padding-right: 1%;
+  font-size: 18px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-weight: bold;
+}
+
+.advertisement {
+  text-align: center;
+  background-color: white;
+}
+
+.advertisement .advertisement__image {
+  height: 260px;
+}
