@@ -16,6 +16,7 @@ export default class SoccerEvent extends PureComponent {
             </div>
         </div>
     );
+}
 };
 
 export default SoccerEvent;
