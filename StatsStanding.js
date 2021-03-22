@@ -2,6 +2,7 @@ import React from "react";
 
 const StatsStanding = (props) => {
 
+render() {
     const {item} = props.data.content;
 
     return (
@@ -30,6 +31,8 @@ const StatsStanding = (props) => {
             </tbody>
         </table>
     )
+}        
 };
+
 
 export default StatsStanding;
