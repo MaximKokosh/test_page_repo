@@ -5,6 +5,7 @@
   </head>
 
   <body>
+    <p> Like button somewhere here </p>
   	<div id="like_button_container"></div>
     <p>This is an example paragraph. Anything in the <strong>body</strong> tag will appear on the page, just like this <strong>p</strong> tag and its contents.</p>
      <div class="liveblog-embed" data-config='{"culture":  "en-GB", "slug": "maxim-test-blog", "baseUrl" : "https://liveblogging.cfc-dev.deltatre.digital/", "fullPage" : false, "showBlogDefinition" : false, "showKeyMoments" : false}'></div>
@@ -20,8 +21,19 @@
                   linkCss.href = cssPath;
                   document.getElementsByTagName("head")[0].appendChild(linkCss);
                 </script> 
+                <script type="text/javascript">
+                  window.InjectCustomSdk = () => {
+                        return {
+                          postParts: {
+                            soccer_event: SoccerEvent,
+                            stats: StatsStanding,
+                            standings: StatsStanding
+                          }
+                        }
 
-                 <!-- Примечание: при деплое на продакшен замените «development.js» на «production.min.js». -->
+                </script>
+
+ <!-- Примечание: при деплое на продакшен замените «development.js» на «production.min.js». -->
   <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
 
