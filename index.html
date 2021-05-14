@@ -1,47 +1,32 @@
-<!doctype html>
-<html>
-  <head>
-    <title>This is the title of the webpage!</title>
-  </head>
-
-  <body>
-    <p> Like button somewhere here </p>
-  	<div id="like_button_container"></div>
-    <p>This is an example paragraph. Anything in the <strong>body</strong> tag will appear on the page, just like this <strong>p</strong> tag and its contents.</p>
-     <div class="liveblog-embed" data-config='{"culture":  "en-GB", "slug": "maxim-test-blog", "baseUrl" : "https://liveblogging.cfc-dev.deltatre.digital/", "fullPage" : false, "showBlogDefinition" : false, "showKeyMoments" : false}'></div>
-                <script>
-                  var sdk = document.createElement("script");
-                  sdk.src = "https://liveblogging.cfc-dev.deltatre.digital/widget/static/js/liveblog.main.js";
-                  document.head.appendChild(sdk);
-
-                  const cssPath = "https://liveblogging.cfc-dev.deltatre.digital/widget/static/css/liveblog.widget.css";
-
-                  const linkCss = document.createElement("link");
-                  linkCss.rel = "stylesheet";
-                  linkCss.href = cssPath;
-                  document.getElementsByTagName("head")[0].appendChild(linkCss);
-                </script> 
-                <script type="module">
-                  import {SoccerEvent} from "./SoccerEvent.js";
-                  import {StatsStanding} from "./StatsStanding.js";
-
-                  window.InjectCustomSdk = () => {
-                        return {
-                          postParts: {
-                            soccer_event: SoccerEvent,
-                            stats: StatsStanding,
-                            standings: StatsStanding
-                          }
-                        }
-                      };
-
-                </script>
-
- <!-- Примечание: при деплое на продакшен замените «development.js» на «production.min.js». -->
-  <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
-  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
-
-  <!-- Загрузим наш React-компонент. -->
-  <script src="like_button.js"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script>
+    $(function() {
+      $("#tabs").tabs();
+    });
+	</script>
+</head>
+<body>
+<div id="tabs">
+	<ul>
+		<li><a href="#tabs-1">Image</a></li>
+		<li><a href="#tabs-2">Comments</a></li>
+	</ul>
+	<div style="height: 300px"></div>
+	<div id="tabs-1">
+		<img class="lb-o-image-full" src="https://res.cloudinary.com/chelsea-qa/image/private/f_auto,q_auto/v1620378750/test/wcrjskiwxbfeiwqc9ema">
+		<p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.</p>
+	</div>
+	<div id="tabs-2">
+		<liveblog-widget class="liveblog-embed" data-config="{&quot;baseUrl&quot;:&quot;https://dapi-liveblogging.cfc-dev.deltatre.digital&quot;, &quot;culture&quot;: &quot;en-GB&quot;, &quot;slug&quot; : &quot;en-match-2128632&quot;}"></liveblog-widget>
+		<script src="https://liveblogging.cfc-dev.deltatre.digital/widget/static/js/liveblog.main.js"></script>
+	</div>
+</div>
+</body>
 </html>
